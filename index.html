@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" lang="es">
+  <title>Fondo White! | &#191;Jugas o tomas?</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="media-queries.css">
+</head>
+  <body id="change-color">
+    <div class="wrapper">
+      <button id="boton" onclick="myFunction()">&#161;SI SALE BLANCO, TOMAS!</button>
+      <div id="reglas">
+        <h2>FONDO WHITE</h2>
+        <p>REGLAS: <br> - Si sale blanco, tomas fondo. <br> - Si sale negro, obligas un fondo.</p>
+      </div>
+    </div>
+  </body>
+
+<script>
+  var changeColor = document.getElementById("change-color");
+  var boton = document.getElementById("boton");
+  var reglas = document.getElementById("reglas");
+  var fernet = "#533804";
+  var cerveza = "#ffd736";
+  var campari = "#d7331e";
+  var vodka = "#39c7f5";
+  var vino = "#d61b22";
+
+  var colors = [
+    "#fff",
+    cerveza,
+    fernet,
+    campari,
+    "green",
+    "orange",
+    vodka,
+    vino,
+    "black"];
+  changeColor.style.backgroundColor = "black";
+
+  function myFunction() {
+    changeColor.style.background = colors[Math.floor((Math.random()*9))];
+    reglas.style.opacity = 0;
+  }
+</script>
+</html>
